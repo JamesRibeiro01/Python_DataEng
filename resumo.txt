@@ -1,0 +1,197 @@
+
+--Python
+Tipagem do python (é dinamica)
+No python não precisamos apontar o tipo da variavel
+
+>>> pais = "Brasil"
+>>> type(pais)
+<class 'str'>
+
+O python utiliza por convenção o padrão Snake_Case 
+para nomes de variaveis
+exemplo
+idade_esposa=20
+perfil_vip= 'Flávio Almeida'
+recibos_em_atraso=30
+
+Modulo 3- Testando valores
+A condição elif
+
+
+Saiba também, que além do == (igualdade), > (maior) e < (menor), também temos >= (maior ou igual), <= (menor ou igual) e != (diferente).
+
+Seguem todas as operadores de comparação:
+
+< - menor que
+> - maior que
+<= - menor ou igual a
+>= - maior ou igual a
+== - igual a
+!= - diferente de
+
+
+a instrução else não aceita receber uma condição
+
+Uma variável do tipo bool pode ter apenas dois valores, True ou False, que podemos usar diretamente:
+
+OBS: No python podemos encontrar duas formas do IF
+com parênteses e sem parênteses.
+
+Modulo 04 - O laço com while
+
+exercicio 
+contador = 1
+
+while(contador <= 10):
+    print(contador)
+    contador = contador + 2
+    
+    if(contador == 5):
+        contador = contador + 2
+
+
+Ambos, if e while, possuem uma condição de entrada. A diferença é que o if executa o bloco apenas uma vez, mas o while repete o bloco enquanto a condição for verdadeira.
+
+O interessante é que o Python não possui um laço com uma condição de saída, que outras linguagens chamam de do-while.
+
+Interpolação de string
+
+MOdulo 5 - O laço for
+
+for contador range(1, 11):
+	print(contador)
+Muito cuidado com o for .. range. A posição final é não-inclusiva, por isso que para imprimirmos de 1 até 10, usamos 11 como posição final:
+
+A função "range()" no for possui os seguintes parametros
+range(start, stop, [step])
+onde o step é opcional. Como queremos pular de 3 em 3, começando com 1(start) até 10(stop), podemos escrever
+for contador in range(1, 11,3):
+	print(contador)
+
+Paar controlar melhor os laços, existem os comandos break e continue, que são utilizados dentro de um laço (for ou while). Ambos fazem parte do controle de fluxo(control flow)
+A diferença é que o break, quando for executado, sai do bloco do laço abruptamente, enquanto continue apenas pula para proxima iteração
+
+interporlação de string
+quando queremos mudar a posição dos valores das minha string
+>>> "Tentativa {} de {}".format(3,10)
+'Tentativa 3 de 10'
+>>> "Tentativa {1} de {0}".format(3,10)
+'Tentativa 10 de 3'
+
+formatando os valores (nesse exemplo foi usado o float)
+>>> "R$ {:.2f}".format(1.59)
+'R$ 1.59'
+>>> "R$ {:.3f}".format(1.59)
+'R$ 1.590'
+>>> "R$ {:.2f}".format(1.59)
+'R$ 1.59'
+>>> "R$ {:.2f}".format(1234.5)
+'R$ 1234.50'
+>>> "R$ {:7.2f}".format(1234.5)
+'R$ 1234.50'
+
+
+
+
+--Database Oracle
+A muitas camadas entre um usuario e o ambiente Oracle
+um usuario tem acesso direto ao banco, onde todo acesso do banco seja controlado pelo servidor
+A arquitetura que tem no servidor garante que todo o acesso de dados seja controlado diretamente pelo servidor.
+O protocolo de comunicação é o Oracle net.
+
+O listener que está rodando na máquina do servidor fica monitorando as portas de comunicação para receber as solicitações dessas conexões;
+O listener é definido através de um arquivo que fica salvo dentro do servidor. Esse arquivo´se chama LISTENER.ORA.
+Já o arquivo de configuração do cliente se chama TNSNAMES.ORA. É um arquivo que fica salvo do lado do cliente e é usado para dizer para ele onde estão localizados os listeners.
+
+
+Oracle net manager
+
+
+Stuard doesn't like cats very much, but his girlfriend Marth has one. Every time he visits her, her cat annoys him. The cat meows all the time, asking for a food refill, even if he is not hungry. Besides he always scratches the sofa to sharpen his claws, which is also very annoying. Also her cat craves some playing and even thought Stuart never fancys (fancies) playing with the cat, he sometimes plays with him. Martha doesn't have the faintest idea that he doesn't like cats. Stuart doesn't want to upset her, so he's never told her about it.
+
+
+1. Because she is going to sharpen her claws instead.
+2. Because he likes how they rustle
+3. He was thinking of playing with the new toy mouse.
+
+Stuart doesn't like cats very much, but his girlfriend Marth has one. Every time he visits her, her cat annoys him. The cat meows all the time, asking for a food refill, even if he is not hungry. Besides he always scratches the sofa to sharpen his claws, which is also very annoying. Also her cat craves some playing and even thought Stuart never fancys (fancies) playing with the cat, he sometimes plays with him. Martha doesn't have the faintest idea that he doesn't like cats. Stuart doesn't want to upset her, so he's never told her about it.
+
+owner 
+- I'm the owner of my life.
+to not have the faintest idea
+- I don't have the faintest idea what are you talking about
+refill 
+- I need to refill my glass of beer.
+to fancy 
+- Do you fancy a cup of coffee?
+to have something in mind 
+- Do you have something in mind for the theme for the party.
+
+Com o .format(), podemos especificar a ordem em que os parâmetros aparecem na string, basta apenas colocar entre as chaves ({}) da string formatada qual parâmetro você quer exibir. É válido lembrar também, que o primeiro parâmetro é o zero, pois tradicionalmente na computação começamos contando de zero, ou seja, no nosso caso:
+
+Modulo 06 - gerando números aleatorios
+OBS -> Algumas funções no python já são pré definidas no python função imbutida no python ou Built-in Functions
+
+Com o random() não é assim, precisamos "importar" essa função 
+
+exercicio
+por que foi necessario usar o comando import para o random?
+Porque o módulo random não está automaticamente disponível dentro do programa, só após importação.
+
+Diferentemente das funções built-in, o módulo random precisa ser explicitamente importado no seu programa
+Existem vários modulos no Python para resolver diversos problemas como trabalhar com arquivos, datas ou expressões regulares.
+https://docs.python.org/3/library/
+
+exercicio 2
+Qual é o menor e o maior número possível que o script abaixo consegue imprimir ?
+import random
+
+aleatorio = random.randrange(10)
+print(aleatorio)
+
+Menor = 0
+Maior = 9
+
+A função random.randrange() quando só possuí um parâmetro supõe que você quer dizer de zero até número passado -1, ou seja, neste caso, o menor número possível quando fazemos:
+
+Quando estamos trabalhando com números aleatórios, é importante observar bem o resultado das nossas funções e como se comporta nosso código, além de entender sobre aleatoriedade. Neste caso o sorteio era apenas de um livro, porém em sistemas de verdade pode ser que o efeito de um sorteio indesejado possa beneficiar acidentalmente uma certa pessoa ou até mesmo causar prejuízos à sua empresa.
+
+Revisão
+Importando a biblioteca random
+Se queremos ter acesso as funções de geração de número aleatorio,
+no python precisamos utilizar as funções da biblioteca random.
+import random
+
+exercicio
+O que sabemos sobre funções Built-in?
+Estão automaticamente disponiveis e podem ser chamadas em todo lugar do nosso código.
+As funções built-in podem ser chamadas em qualquer momento. Exemplo de funções
+type(..); abs(); input(..); ou int()
+https://docs.python.org/3/library/functions.
+
+/ -> float divisor -> retorna sempre um valor float
+// -> int divisor - sempre devolve o valor inteiro (sem arredondar)
+
+Pouco vimos sobre funções, mas não se preocupe. Na medida em que você avança nos cursos sobre Python 3, vamos introduzir mais recursos.
+
+Para declarar uma função, devemos usar a palavra chave def do mundo Python, seguida pelo nome da função. Lembrando que é consenso usar a nomenclatura snake_case:
+
+def nome_da_funcao():
+    # todo o código identado faz parte da função
+    print("aprendendo funções")
+
+    Para chamar a nossa própria função, usamos o nome dela seguido pelos parênteses, por exemplo:
+
+nome_da_funcao()
+
+
+O senso comum é que o Python é uma linguagem interpretada. Interpretado significa que não há um processo de compilação que traduz o código fonte em algum código nativo, que o seu computador entende. A documentação do Python confirma isso, no entanto também menciona a presença de um compilador:
+
+"Python é uma linguagem interpretada, em oposição às compiladas, embora a distinção possa ficar desfocada devido à presença do compilador de bytecode."
+
+Temos um compilador, porém de bytecode. Bytecode é um código intermediário, normalmente independente do sistema operacional. Então, Python é uma linguagem compilada também? Em 2003, Fredrik Lundh, em seu artigo Compiling Python Code, título que perverte o senso comum, começa:
+
+
+27 - 18 - 11 - 8 - 3 - 9
+
+15 - 14 - 11 - 11 - 11 - 9
