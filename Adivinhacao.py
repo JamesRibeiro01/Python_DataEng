@@ -12,13 +12,23 @@ numero_secreto = 42
 #Usando a função int(), para realizar a "Conversão"
 chute = int(input("Digite o seu número!\n"))
 
+acertou = chute == numero_secreto
+maior   = chute > numero_secreto
+menor   = chute < numero_secreto
+
 print("Você digitou", chute)
 
 
 #condiçao IF usado para comparação de dois ou mais valores, condicional.
 #Para comparar dois valores no IF vc deve usar o == para comparação, somente "=" é usado para atribuição
 # O codigo IF no final do bloco da condição deve ser iniciado com :
-if (numero_secreto == chute):
+if (acertou):
     print("Você acertou!")
 else:
-    print("Você errou!")
+    if(maior):
+        print("Seu chute foi maior do que o número secreto")
+    elif(menor): #elif (else if) 
+        print("Seu chute foi menor do que o número secreto")
+
+
+print("Fim de Jogo")
